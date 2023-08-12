@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rate a Product</title>
+    <link rel="styleSheet" href="./rateProductForm.css" />
+  </head>
+  <body>
+    <h1>Rate a Product</h1>
+    <p>indicates required field.</p>
+    <form>
+      <div>
+        <label for="product" class="required">Product</label>
+        <input type="text" name="product" id="product" required />
+      </div>
+
+      <div>
+        <label for="date" class="required">Purchase Date</label>
+        <input type="date" name="date" id="date" required />
+      </div>
+
+      <div>
+        <label for="rating" class="required"> Rating</label>
+        <input
+          type="number"
+          name="rating"
+          id="rating"
+          value="5"
+          min="0"
+          max="5"
+          required
+        />
+      </div>
+
+      <div>
+        <label for="comments"> Comments</label>
+        <textarea name="comments" id="comments" cols="100" rows="5"></textarea>
+      </div>
+      <div>
+        <input type="submit" value="Submit Rating" />
+      </div>
+    </form>
+  </body>
+</html>

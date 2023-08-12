@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GreekHouse</title>
+    <style>
+      img {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Restaurant Reviews</h1>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="addReview.html">Add Review</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+    <h2>Greek House</h2>
+    <img
+      src="assets/albert-YYZU0Lo1uXE-unsplash.jpg"
+      alt="Greek House"
+      height="300px"
+      width="1000px"
+    />
+    <img
+      alt="rating"
+      height="100px"
+      width="300px"
+      src="assets/towfiqu-barbhuiya-0ZUoBtLw3y4-unsplash.jpg"
+    />
+    <section>
+      <h3>Overview</h3>
+      <ul>
+        <li>cuisine: Chinese, Indian</li>
+        <li>Price: 1000$</li>
+        <li>Greek House is famous for its ambience and good taste of food.</li>
+      </ul>
+    </section>
+    <section id="reviews">
+      <h3>Reviews</h3>
+    </section>
+    <footer>2023 Restaurant Reviews</footer>
+
+    <script>
+      const userReviews = localStorage.getItem("reviews")
+        ? JSON.parse(localStorage.getItem("reviews"))
+        : [];
+
+      // now filter and get the reviews for only greek house restaurant
+      const filteredReviews = userReviews.filter(
+        (review) => review.restaurant === "Greek House"
+      );
+
+      const reviewsContainer = document.getElementById("reviews");
+      filteredReviews.forEach((review) => {
+        const reviewDiv = document.createElement("div");
+        const ratingParagraph = document.createElement("p");
+        const descriptionParagraph = document.createElement("p");
+
+        ratingParagraph.innerHTML = `<b>Rating</b>:${review.rating}`;
+        descriptionParagraph.innerHTML = `<b>${review.name}</b>:${review.message}`;
+
+        reviewDiv.appendChild(ratingParagraph);
+        reviewDiv.appendChild(descriptionParagraph);
+        reviewsContainer.appendChild(reviewDiv);
+      });
+    </script>
+  </body>
+</html>
