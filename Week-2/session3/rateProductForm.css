@@ -1,0 +1,34 @@
+label {
+  display: inline-block;
+  width: 120px;
+}
+
+input {
+  width: 300px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+textarea {
+  width: 300px;
+  padding: 10px;
+}
+
+label + input {
+  background-color: rgb(219, 241, 248);
+}
+
+.required::after {
+  content: "*";
+  color: red;
+}
+
+p::before {
+  content: "*";
+  color: red;
+}
+
+input[type="submit"] {
+  width: auto;
+  margin-top: 10px;
+}
