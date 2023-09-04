@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Birthday Message Creator</title>
+  </head>
+  <style>
+    input {
+      width: 400px;
+      height: 20px;
+    }
+    label {
+      display: block;
+    }
+  </style>
+  <body>
+    <h1>Happy Birthday Message Creator</h1>
+    <form>
+      <div>
+        <label for="message">Message?</label>
+        <input
+          type="text"
+          id="message"
+          name="message"
+          required
+          placeholder="Happy Birthday!!."
+        />
+      </div>
+
+      <div>
+        <label for="email">Email address?</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          placeholder="akhil@gmail.com"
+          pattern="[a-zA-Z0-9-_.]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0- 9-]+)*"
+        />
+      </div>
+
+      <div>
+        <label for="date">Date to Send?</label>
+        <input type="date" id="date" name="date" required />
+      </div>
+      <div>
+        <label for="color">Message color?</label>
+        <input type="color" id="color" name="color" />
+      </div>
+      <div>
+        <label for="blinks">Number of blinks?</label>
+        <input
+          type="number"
+          min="0"
+          max="10"
+          value="0"
+          id="blinks"
+          name="blinks"
+        />
+      </div>
+      <div>
+        <label for="volume">Music volume?</label>
+        <input
+          type="range"
+          min="0"
+          max="50"
+          value="20"
+          id="volume"
+          name="volume"
+        />
+      </div>
+      <div>
+        <input type="button" value="Send Birthday Message" />
+      </div>
+    </form>
+  </body>
+</html>

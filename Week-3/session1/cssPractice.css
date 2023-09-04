@@ -1,0 +1,45 @@
+.poem {
+  border: 2px solid blue;
+  width: 600px;
+  height: 280px;
+  padding: 5px;
+  background-color: #f0f0f0;
+}
+
+.para1 {
+  background-color: yellow;
+  width: 200px;
+  padding: 10px;
+  float: left;
+  margin-right: 10px;
+}
+
+.para2 {
+  padding: 10px;
+}
+
+.para3 {
+  background-color: orange;
+  width: 200px;
+  padding: 10px;
+  position: absolute;
+  left: 110px;
+  top: 200px;
+}
+
+.para4 {
+  background-color: rgb(255, 80, 0);
+  width: 200px;
+  padding: 10px;
+  float: right;
+  margin-right: 40px;
+  margin-top: 10px;
+  color: white;
+}
+
+h1 {
+  color: blue;
+  font-size: 16pt;
+  font-family: Arial;
+  font-style: italic;
+}
