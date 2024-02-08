@@ -1,0 +1,28 @@
+1. Find all movies released in a specific year
+
+db.Movies.find({releaseYear:2000})
+
+2. Find all movies in a specific genre
+
+db.Movies.find({genre:"Comedy"})
+
+
+3. Find all movies directed by a specific director.
+
+db.Movies.find({director:ObjectId("65bf2df9225c2552b44df918")})
+
+4. Find all movies that a specific actor acted in
+
+db.Movies.find({actors:ObjectId("65bf2ef8225c2552b44df91c")})
+
+
+5. Find all directors from a specific nationality
+
+db.Director.find({nationality:"Indian"})
+
+
+
+6. Find all actors from a specific nationality.
+
+db.Actors.find({nationality:"Indian"})
+

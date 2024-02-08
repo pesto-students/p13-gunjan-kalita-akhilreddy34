@@ -1,0 +1,190 @@
+
+/add movies to the director collection
+// Director1
+db.Director.updateOne(
+  { _id: ObjectId("65bf2df9225c2552b44df915") },
+  {
+    $set: {
+      movies: [
+        ObjectId("65bf3313225c2552b44df923"),
+        ObjectId("65bf3313225c2552b44df92b")
+      ]
+    }
+  }
+);
+
+//director2
+db.Director.updateOne(
+  { _id: ObjectId("65bf2df9225c2552b44df916") },
+  {
+    $set: {
+      movies: [
+        ObjectId("65bf3313225c2552b44df926"),
+        ObjectId("65bf3313225c2552b44df928"),
+        ObjectId("65bf3313225c2552b44df929"),
+
+      ]
+    }
+  }
+);
+
+//director 3 
+
+db.Director.updateOne(
+  { _id: ObjectId("65bf2df9225c2552b44df917") },
+  {
+    $set: {
+      movies: [
+        ObjectId("65bf3313225c2552b44df927"),
+      ]
+    }
+  }
+);
+
+//director 4
+
+
+db.Director.updateOne(
+  { _id: ObjectId("65bf2df9225c2552b44df918") },
+  {
+    $set: {
+      movies: [
+        ObjectId("65bf3313225c2552b44df922"),
+        ObjectId("65bf3313225c2552b44df924"),
+        ObjectId("65bf3313225c2552b44df92a"),
+
+      ]
+    }
+  }
+);
+
+//director 5
+db.Director.updateOne(
+  { _id: ObjectId("65bf2df9225c2552b44df919") },
+  {
+    $set: {
+      movies: [
+        ObjectId("65bf3313225c2552b44df925"),
+      ]
+    }
+  }
+);
+
+
+// add movies to actor collection
+
+/Actor1
+
+db.Actors.updateOne(
+    { _id: ObjectId("65bf2ef8225c2552b44df91a") },
+  {
+    $set: {
+      movies: [
+        ObjectId("65bf3313225c2552b44df925"),
+        ObjectId("65bf3313225c2552b44df926"),
+        ObjectId("65bf3313225c2552b44df928"),
+        ObjectId("65bf3313225c2552b44df92b"),
+      ]
+    }
+  }
+)
+
+/actor 2 
+
+db.Actors.updateOne(
+    { _id: ObjectId("65bf2ef8225c2552b44df91b") },
+  {
+    $set: {
+      movies: [
+        ObjectId("65bf3313225c2552b44df922"),
+        ObjectId("65bf3313225c2552b44df926"),
+      ]
+    }
+  }
+)
+
+/Actor3
+db.Actors.updateOne(
+    { _id: ObjectId("65bf2ef8225c2552b44df91c") },
+  {
+    $set: {
+      movies: [
+        ObjectId("65bf3313225c2552b44df922"),
+        ObjectId("65bf3313225c2552b44df924"),
+        ObjectId("65bf3313225c2552b44df926"),
+        ObjectId("65bf3313225c2552b44df928"),
+        ObjectId("65bf3313225c2552b44df929"),
+      ]
+    }
+  }
+)
+
+/Actor 4 
+db.Actors.updateOne(
+    { _id: ObjectId("65bf2ef8225c2552b44df91d") },
+  {
+    $set: {
+      movies: [
+        ObjectId("65bf3313225c2552b44df923"),
+        ObjectId("65bf3313225c2552b44df928"),
+        ObjectId("65bf3313225c2552b44df92b"),
+      ]
+    }
+  }
+)
+
+/actor 5 
+db.Actors.updateOne(
+    { _id: ObjectId("65bf2ef8225c2552b44df91e") },
+  {
+    $set: {
+      movies: [
+        ObjectId("65bf3313225c2552b44df923"),
+        ObjectId("65bf3313225c2552b44df924"),
+        ObjectId("65bf3313225c2552b44df927"),
+        ObjectId("65bf3313225c2552b44df92a"),
+      ]
+    }
+  }
+)
+
+/actor 6 
+db.Actors.updateOne(
+    { _id: ObjectId("65bf2ef8225c2552b44df91f") },
+  {
+    $set: {
+      movies: [
+        ObjectId("65bf3313225c2552b44df925"),
+        ObjectId("65bf3313225c2552b44df927"),
+      ]
+    }
+  }
+)
+
+/actor 7 
+db.Actors.updateOne(
+    { _id: ObjectId("65bf2ef8225c2552b44df920") },
+  {
+    $set: {
+      movies: [
+        ObjectId("65bf3313225c2552b44df925"),
+        ObjectId("65bf3313225c2552b44df926"),
+        ObjectId("65bf3313225c2552b44df927"),
+        ObjectId("65bf3313225c2552b44df92a"),
+      ]
+    }
+  }
+)
+
+/actor 8 
+db.Actors.updateOne(
+    { _id: ObjectId("65bf2ef8225c2552b44df921") },
+  {
+    $set: {
+      movies: [
+        ObjectId("65bf3313225c2552b44df923"),
+        ObjectId("65bf3313225c2552b44df927"),
+      ]
+    }
+  }
+)

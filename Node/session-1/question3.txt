@@ -1,0 +1,5 @@
+
+What are the primary keys and foreign keys in a relational database, and how do they establish relationships between tables?
+
+PRIMARY KEYS: Primary key is a key which uniquely identifies a row ina table or we can say primary key is one of the candidate key.
+FOREIGN KEY: foreign key is a key which establishes the relationship between two tables they establish the relationship by inserting  and referencing the primary key of one table as foreign key to other table.

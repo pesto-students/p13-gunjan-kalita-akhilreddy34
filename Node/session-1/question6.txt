@@ -1,0 +1,7 @@
+
+Explain the concept of concurrency control, deadlocks in a multi-user database environment.
+
+when ever if a particular resource is used by multiple users at same time  the os will lock that resource for the user who requested first and remaining users should wait for unlock of the resources so in some cases it can happen that 
+resource1->process1-> resource2
+resource2->process2-> resource1
+now in above example Deadlock is happened and no one can use any resources properly.

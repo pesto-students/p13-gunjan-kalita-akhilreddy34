@@ -1,0 +1,101 @@
+
+CITY SCHEMA
+
+CREATE TABLE cities (
+    id int NOT NULL,
+    city varchar(20),
+    state varchar(20),
+     PRIMARY KEY (id)
+);
+
+WAREHOUSE SCHEMA
+
+CREATE TABLE warehouse (
+    id int NOT NULL,
+    name varchar(30) NOT NULL,
+    cityId int NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (cityId) REFERENCES cities(id)
+
+);
+
+
+STORE SCHEMA
+
+CREATE TABLE store (
+    id int NOT NULL,
+    name varchar(30) NOT NULL,
+    cityId int NOT NULL,
+    warehouseId int NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (cityId) REFERENCES cities(id),
+    FOREIGN KEY (warehouseId) REFERENCES warehouse(id)
+);
+
+CUSTOMER SCHEMA
+
+CREATE TABLE customer (
+    id int NOT NULL,
+    name varchar(20),
+    address varchar(50),
+    cityId int NOT NULL,
+     PRIMARY KEY (id),
+    FOREIGN KEY (cityId) REFERENCES cities(id)
+         
+);
+
+
+ORDERS SCHEMA
+
+CREATE TABLE orders (
+    id int NOT NULL,
+    date DATE,
+    customerId int NOT NULL,
+     PRIMARY KEY (id),
+    FOREIGN KEY (customerId) REFERENCES customer(id)
+);
+
+
+
+ITEMS SCHEMA
+
+CREATE TABLE items (
+    id int NOT NULL,
+    description TEXT,
+    weight DECIMAL(5,2),
+    cost DECIMAL(5,2),
+     PRIMARY KEY (id)
+);
+
+
+ORDER_ITEMS_MAPPING SCHEMA
+
+CREATE TABLE order_item_mapping (
+    orderId INT,
+    itemId INT,
+    PRIMARY KEY (orderId, itemId),
+    FOREIGN KEY (orderId) REFERENCES orders(id),
+    FOREIGN KEY (itemId) REFERENCES items(id)
+    );
+
+
+STORE_ITEMS_MAPPING
+CREATE TABLE store_items_mapping (
+    storeId INT,
+    itemId INT,
+    PRIMARY KEY (storeId, itemId),
+    FOREIGN KEY (storeId) REFERENCES store(id),
+    FOREIGN KEY (itemId) REFERENCES items(id)
+    );
+
+
+
+
+
+
+
+
+
+
+
+

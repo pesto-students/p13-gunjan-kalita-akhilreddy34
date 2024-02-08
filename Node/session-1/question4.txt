@@ -1,0 +1,8 @@
+
+Explain the ACID properties in the context of database transactions.
+
+A-> ATOMICITY: Each transaction should be performed completely or should be rollback completely.
+C->CONSISTENCY -> The result should be same or consistent even before and after the transaction 
+eg: you have transferred 50 Rupees to your friend the transaction is successful but your friend received only 40 rupees this should not happen and data should be consistent means what ever you have sent should reflect in your friends account.
+I-> ISOLATION-> If two transactions have been performed at same time from same account every transaction should be isolated and should not be interrupted by other transaction.
+D->DURABILITY-> At any point of time and at any failure the data should not be lost and data should be recorded.

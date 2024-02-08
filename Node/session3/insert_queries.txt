@@ -1,0 +1,140 @@
+
+db.Director.insertMany([
+{
+    "name": "director1",
+    "nationality": "Indian",
+},
+{
+    "name": "director2",
+    "nationality": "American",
+},
+{
+    "name": "director3",
+    "nationality": "Indian",
+},
+{
+    "name": "director4",
+    "nationality": "Canadian",
+},
+{
+    "name": "director5",
+    "nationality": "American",
+}
+])
+
+
+
+db.Actors.insertMany(
+
+[
+    {
+    "name": "Actor1",
+    "nationality": "Indian",
+},
+{
+    "name": "Actor2",
+    "nationality": "Indian",
+},{
+    "name": "Actor3",
+    "nationality": "Canadian",
+},{
+    "name": "Actor4",
+    "nationality": "American",
+},{
+    "name": "Actor5",
+    "nationality": "Indian",
+},{
+    "name": "Actor6",
+    "nationality": "American",
+},{
+    "name": "Actor7",
+    "nationality": "Canadian",
+},{
+    "name": "Actor8",
+    "nationality": "American",
+},
+])
+
+
+
+
+
+
+db.Movies.insertMany([
+    {
+        "title":"Movie1",
+        "releaseYear":2000,
+        "genre":"Comedy",
+        "director":ObjectId("65bf2df9225c2552b44df918"),
+        actors:[ObjectId("65bf2ef8225c2552b44df91c"),ObjectId("65bf2ef8225c2552b44df91b")]
+    },
+     {
+        "title":"Movie2",
+        "releaseYear":2024,
+        "genre":"Thriller",
+        "director":ObjectId("65bf2df9225c2552b44df915"),
+        actors:[ObjectId("65bf2ef8225c2552b44df921"),ObjectId("65bf2ef8225c2552b44df91e"),ObjectId("65bf2ef8225c2552b44df91d")]
+    },
+    {
+        "title":"Movie3",
+        "releaseYear":2000,
+        "genre":"Comedy",
+        "director":ObjectId("65bf2df9225c2552b44df918"),
+        actors:[ObjectId("65bf2ef8225c2552b44df91c"),ObjectId("65bf2ef8225c2552b44df91e")]
+    },
+    {
+        "title":"Movie4",
+        "releaseYear":2023,
+        "genre":"Horror",
+        "director":ObjectId("65bf2df9225c2552b44df919"),
+        actors:[ObjectId("65bf2ef8225c2552b44df91a"),ObjectId("65bf2ef8225c2552b44df91f"),ObjectId("65bf2ef8225c2552b44df920")]
+    },
+     {
+        "title":"Movie4",
+        "releaseYear":2024,
+        "genre":"Thriller",
+        "director":ObjectId("65bf2df9225c2552b44df916"),
+        actors:[ObjectId("65bf2ef8225c2552b44df91b"),ObjectId("65bf2ef8225c2552b44df91c"),ObjectId("65bf2ef8225c2552b44df920"),ObjectId("65bf2ef8225c2552b44df91a")]
+    },
+     {
+        "title":"Movie6",
+        "releaseYear":2023,
+        "genre":"Horror",
+        "director":ObjectId("65bf2df9225c2552b44df917"),
+        actors:[ObjectId("65bf2ef8225c2552b44df91e"),ObjectId("65bf2ef8225c2552b44df91f"),ObjectId("65bf2ef8225c2552b44df920"),ObjectId("65bf2ef8225c2552b44df921")]
+    },
+      {
+        "title":"Movie7",
+        "releaseYear":2000,
+        "genre":"Comedy",
+        "director":ObjectId("65bf2df9225c2552b44df916"),
+        actors:[ObjectId("65bf2ef8225c2552b44df91a"),ObjectId("65bf2ef8225c2552b44df91d"),ObjectId("65bf2ef8225c2552b44df91c")]
+    },
+          {
+        "title":"Movie8",
+        "releaseYear":2008,
+        "genre":"Thriller",
+        "director":ObjectId("65bf2df9225c2552b44df916"),
+        actors:[ObjectId("65bf2ef8225c2552b44df91c")]
+    },
+      {
+        "title":"Movie9",
+        "releaseYear":2010,
+        "genre":"Comedy",
+        "director":ObjectId("65bf2df9225c2552b44df918"),
+        actors:[ObjectId("65bf2ef8225c2552b44df91e"),ObjectId("65bf2ef8225c2552b44df920")]
+    },
+          {
+        "title":"Movie10",
+        "releaseYear":2008,
+        "genre":"Thriller",
+        "director":ObjectId("65bf2df9225c2552b44df915"),
+        actors:[ObjectId("65bf2ef8225c2552b44df91d"),ObjectId("65bf2ef8225c2552b44df91a")]
+    },
+])
+
+
+
+
+
+

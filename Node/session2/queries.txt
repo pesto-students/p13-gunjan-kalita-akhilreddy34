@@ -1,0 +1,51 @@
+
+1. Find the item that has the minimum weight.
+
+ SELECT *
+FROM items
+WHERE weight = (SELECT MIN(weight) FROM items);
+
+2. Find the different warehouses in "Pune".
+
+SELECT warehouse.id, warehouse.name,cities.city
+FROM warehouse
+INNER JOIN cities ON warehouse.cityId = cities.id
+WHERE cities.city = 'Pune';
+
+
+3. Find the details of items ordered by a customer named "Mr. Patil".
+
+SELECT items.id,items.description,items.cost,items.weight,orders.date 
+FROM order_item_mapping
+INNER JOIN orders ON order_item_mapping.orderId = orders.id
+INNER JOIN items ON order_item_mapping.itemId = items.id
+INNER JOIN customer ON orders.customerId = customer.id
+WHERE customer.name = 'Patil';
+
+4. Find a Warehouse that has the maximum number of stores.
+
+SELECT warehouse.name AS wareHouse, COUNT(store.id) AS count
+FROM store
+INNER JOIN warehouse ON warehouse.id = store.warehouseId
+GROUP BY warehouse.id, warehouse.name
+ORDER BY count DESC
+LIMIT 1;
+
+5. Find an item that is ordered for a minimum number of times.
+
+SELECT items.description AS wareHouse, COUNT(items.id) AS count
+FROM order_item_mapping
+INNER JOIN items ON items.id = order_item_mapping.itemId
+GROUP BY items.id, items.description
+ORDER BY count ASC
+LIMIT 1;
+
+
+6. Find the detailed orders given by each customer.
+
+
+SELECT customer.name AS customerName,items.description AS Item ,orders.date AS orderedDate,items.cost AS itemCost,items.weight AS itemWeight 
+FROM order_item_mapping
+INNER JOIN orders ON order_item_mapping.orderId = orders.id
+INNER JOIN items ON order_item_mapping.itemId = items.id
+INNER JOIN customer ON orders.customerId = customer.id;

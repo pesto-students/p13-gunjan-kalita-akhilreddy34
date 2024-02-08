@@ -1,0 +1,9 @@
+
+
+Read about Database sharding and explain couple of real time examples where, why, how it this concept is used.
+
+Sharding is a concept used when if a single table is growing in size and one DB server is not sufficient to handle the data then we will use sharding and split the data of that single 
+table into multiple tables in different DB servers based on a some key parameter is called sharding.
+Real life example
+Social media
+E commerce website.

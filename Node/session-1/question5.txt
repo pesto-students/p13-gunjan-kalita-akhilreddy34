@@ -1,0 +1,5 @@
+
+Describe the concept of indexing in a database. How does indexing improve query performance?
+
+indexing is used for search optimization when you apply indexing on a particular field  it will create a separate table for all the rows in that field in sorting order
+so when ever you search using that field we already have data in sorted fashion so it will do binary search and give the result in very efficient and optimized way.
