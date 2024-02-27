@@ -1,0 +1,9 @@
+CREATE TABLE assets (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    userId INT NOT NULL,
+    assetType ENUM('Equity', 'Fixed Income', 'Alternatives') NOT NULL,
+    assetName VARCHAR(255) NOT NULL,
+    value DECIMAL(10, 2) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (userId) REFERENCES users(id)
+);
